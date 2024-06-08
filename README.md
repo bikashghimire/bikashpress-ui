@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### Packages Used 
+
+- Next.js/React
+- TypeScript
+- Shadcn/ui
+- Tailwind CSS
+- Recharts
+- Lucide React
+- React Hook Form
+- Zod
+- Next Themes
+  
+
 ## Getting Started
 
 First, run the development server:
