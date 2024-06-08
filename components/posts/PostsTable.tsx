@@ -1,11 +1,11 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
+  TableCaption,
 } from "@/components/ui/table";
 import Link from "next/link";
 import posts from "@/data/posts";
@@ -15,10 +15,11 @@ interface PostsTableProps {
   limit?: number;
   title?: string;
 }
+
 const PostsTable = ({ limit, title }: PostsTableProps) => {
-  // sort posts in decending order based on date
+  // Sort posts in dec order based on date
   const sortedPosts: Post[] = [...posts].sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
   // Filter posts to limit
@@ -28,6 +29,7 @@ const PostsTable = ({ limit, title }: PostsTableProps) => {
     <div className="mt-10">
       <h3 className="text-2xl mb-4 font-semibold">{title ? title : "Posts"}</h3>
       <Table>
+        <TableCaption>A list of recent posts</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead>Title</TableHead>
@@ -35,7 +37,7 @@ const PostsTable = ({ limit, title }: PostsTableProps) => {
             <TableHead className="hidden md:table-cell text-right">
               Date
             </TableHead>
-            <TableHead className="text-left">View</TableHead>
+            <TableHead>View</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -45,12 +47,12 @@ const PostsTable = ({ limit, title }: PostsTableProps) => {
               <TableCell className="hidden md:table-cell">
                 {post.author}
               </TableCell>
-              <TableCell className="hidden md:table-cell text-right">
+              <TableCell className="text-right hidden md:table-cell">
                 {post.date}
               </TableCell>
               <TableCell>
                 <Link href={`/posts/edit/${post.id}`}>
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-xs ">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-xs">
                     Edit
                   </button>
                 </Link>

@@ -3,7 +3,6 @@ import PostsTable from "@/components/posts/PostsTable";
 import { Folder, MessageCircle, Newspaper, User } from "lucide-react";
 import AnalyticsChart from "@/components/dashboard/Analytics";
 
-DashboardCard;
 export default function Home() {
   return (
     <>
