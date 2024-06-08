@@ -1,6 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### Packages Used 
+# BikashPress UI
+
+<img src="img/dashboard1.png" src="dashboard screenshot1">
+<img src="img/dashboard2.png" src="dashboard screenshot2">
+
+### Packages Used
 
 - Next.js/React
 - TypeScript
@@ -11,7 +16,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - React Hook Form
 - Zod
 - Next Themes
-  
 
 ## Getting Started
 
