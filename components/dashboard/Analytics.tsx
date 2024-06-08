@@ -6,6 +6,8 @@ import {
   YAxis,
   CartesianGrid,
   ResponsiveContainer,
+  Tooltip,
+  Legend,
 } from "recharts";
 import {
   Card,
@@ -28,10 +30,18 @@ const AnalyticsChart = () => {
           <div style={{ width: "100%", height: 300 }}>
             <ResponsiveContainer>
               <LineChart width={1100} height={300} data={data}>
-                <Line type="monotone" dataKey="uv" stroke="#2563EB" />
-                <CartesianGrid stroke="#ccc" />
+                <Line
+                  type="monotone"
+                  dataKey="uv"
+                  stroke="#2563EB"
+                  activeDot={{ r: 8 }}
+                />
+                <Line type="monotone" dataKey="pv" stroke="#F87171" />
+                <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
+                <Tooltip />
+                <Legend />
               </LineChart>
             </ResponsiveContainer>
           </div>
